@@ -156,7 +156,7 @@ export default function Sidebar() {
         {user?.role === "guest" ? (
           <Button
             variant="ghost"
-            className="w-full justify-start gap-3 hover:bg-accent2/10 py-2 cursor-pointer"
+            className="w-full justify-start gap-3 hover:bg-accent2/20 py-2 cursor-pointer"
             onClick={() => navigate("/login")}
           >
             <Avatar className="h-7 w-7">
@@ -169,7 +169,7 @@ export default function Sidebar() {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="ghost"
-                className="w-full justify-start gap-3 hover:bg-accent2/10 cursor-pointer"
+                className="w-full justify-start gap-3 hover:bg-accent2/20 cursor-pointer"
               >
                 <Avatar className="h-7 w-7">
                   <AvatarImage src={user?.avatar} />

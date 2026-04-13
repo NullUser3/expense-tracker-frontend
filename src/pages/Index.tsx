@@ -19,7 +19,7 @@ export default function Index() {
       <div className="flex-1 flex flex-col items-center sm:ml-64">
         {/* Guest Notice Alert */}
         {isGuest && showGuestAlert && (
-          <div className="border-b border-border bg-yellow-500/5 px-6 py-4">
+          <div className="border-b border-border bg-yellow-500/5 px-6 py-4 w-full 2xl:max-w-6xl">
             <Alert variant="warning" className="border-yellow-500/30 bg-yellow-500/10 relative">
               <button
                 onClick={() => setShowGuestAlert(false)}

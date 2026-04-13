@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { fetchCurrentUser } from './store/slices/userSlice';
+import Callback from './pages/Callback';
 
 export default function App() {
   const location = useLocation();
@@ -43,6 +44,7 @@ export default function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/auth/callback" element={<Callback />} />
       <Route path="/" element={<Index />}>
         <Route index element={<Dashboard />} />
         <Route path="categories" element={<Categories />} />

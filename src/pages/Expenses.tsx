@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { fetchExpenses, createExpense, updateExpense, deleteExpense } from "../store/slices/expensesSlice";
@@ -40,6 +41,7 @@ const Expenses = () => {
     // Update form date when month/year changes
     const currentDay = new Date().getDate();
     const newDate = new Date(year, month - 1, currentDay);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setFormData((prev) => ({
       ...prev,
       date: newDate.toISOString().split("T")[0],

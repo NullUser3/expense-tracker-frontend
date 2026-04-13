@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { fetchBudgets, createBudget, updateBudget, deleteBudget } from "../store/slices/budgetsSlice";
@@ -33,6 +34,7 @@ const Budgets = () => {
   useEffect(() => {
     // Reset form when month/year changes to ensure budget is for the selected period
     if (!editingId) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFormData({ categoryId: "", limit: "", recurring: false });
     }
   }, [month, year, editingId]);

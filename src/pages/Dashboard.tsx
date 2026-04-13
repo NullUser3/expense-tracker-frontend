@@ -76,6 +76,7 @@ const Dashboard = () => {
   useEffect(() => {
     const hasSeenOnboarding = localStorage.getItem("hasSeenOnboarding");
     if (!hasSeenOnboarding && user?.role === "user") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShowOnboarding(true);
     }
   }, [user]);
@@ -135,7 +136,7 @@ const Dashboard = () => {
               <Button
                 onClick={dismissOnboarding}
                 size="sm"
-                className="mt-4 hover:bg-accent2"
+                className="mt-4 hover:bg-blue-500/20"
                 variant="ghost"
               >
                 Got it, thanks!
