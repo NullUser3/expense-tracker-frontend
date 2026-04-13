@@ -139,6 +139,12 @@ const Expenses = () => {
     return cat?.name || "Unknown";
   };
 
+  const getCategoryColor = (categoryId?: string) => {
+    if (!categoryId) return undefined;
+    const cat = categories.find((c) => c._id === categoryId);
+    return cat?.color;
+  };
+
   const getRemainingBudget = (categoryId: string) => {
     const budget = budgets.find(
       (b) => b.categoryId === categoryId && b.month === month && b.year === year
@@ -262,7 +268,7 @@ const Expenses = () => {
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <span className="font-medium">{getCurrency(expense.amount)}</span>
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-sm" style={{ color: getCategoryColor(expense.categoryId) || 'var(--color-muted-foreground)' }}>
                         {getCategoryName(expense.categoryId)}
                       </span>
                     </div>
