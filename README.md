@@ -16,6 +16,7 @@ The app provides real-time budgeting insights, categorized transactions, and a c
 
 **Backend**
 - Node.js
+- TypeScript
 - Express
 - MongoDB
 - JWT Authentication
@@ -32,10 +33,10 @@ The app provides real-time budgeting insights, categorized transactions, and a c
 
 ## Screenshots
 
-![Dashboard Screenshot](https://your-image-link.com/dashboard.png)
+![Dashboard Screenshot](https://raw.githubusercontent.com/NullUser3/expense-tracker-frontend/main/public/expense.png)
 
-![Add Expense Screenshot](https://your-image-link.com/add-expense.png)
+![Add Expense Screenshot](https://raw.githubusercontent.com/NullUser3/expense-tracker-frontend/main/public/add_category.png)
 
 ## Backend Repository
 
-[Backend Repository](https://github.com/your-username/expense-tracker-backend)
+[Backend Repository](https://github.com/NullUser3/expense-tracker-backend)
